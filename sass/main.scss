@@ -1,5 +1,5 @@
 @import 'bourbon/bourbon';
-@import 'neat/grid-settings';
+//@import 'neat/grid-settings';
 @import 'neat/neat';
  
 
@@ -8,7 +8,7 @@ $primary-color: #333;
 $blockcolor: #999;
 $blockcolor-light: #DDD;
 $body-line-height: 1em;
-
+$banner-height: 300px;
 
 body { 
  @include outer-container;
@@ -24,7 +24,7 @@ div {
     @include span-columns(12);
  
     canvas {
-     height: 300px;
+     height: $banner-height;
      width: 1024px;
      background-color: #F0F;
     }background-color: #00F;
@@ -68,6 +68,12 @@ div {
         }
    }
 
+   &.main {
+	@include span-columns(12);
+	padding-top: 2em;
+   }
+
+
    aside {
 	@include span-columns(2);
 	background-color: #000;
@@ -88,12 +94,12 @@ section#gallery {
 		height: $body-line-height*4;
 		line-height: $body-line-height;
 		text-align: left;
-		padding: 1em;
+		padding: 0em; //1em;
 	}
 
 	div.project {
-		font-size: 0.78em;
-		height: 8em;
+		//font-size: 0.78em;
+		height: 21em;
 		@include span-columns(3);
 		@include omega(4n);
 	}	
