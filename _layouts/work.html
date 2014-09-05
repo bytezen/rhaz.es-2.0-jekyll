@@ -5,6 +5,21 @@
 
     <body>
 	{% include header.html %}
+	<div class="main">
+	<div id="navbar">
+	{% include mainNav.html %}
+	</div>
+	<section class="work">
+	<div class="projectTitle">
+		{{ page.projectTitle }}
+	</div>
+	<div class="projectDescription">
 	{{ content }}
+	</div>
+	<div class="projectTags">
+	{{ page.tags }}
+	</div>
+	</section>
+	</div>
     </body>
 </html>

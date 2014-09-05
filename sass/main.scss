@@ -1,5 +1,5 @@
 @import 'bourbon/bourbon';
-//@import 'neat/grid-settings';
+@import 'neat/grid-settings';
 @import 'neat/neat';
  
 
@@ -81,26 +81,49 @@ div {
 } 
 
 
-section#gallery {
-	@include outer-container;
-	text-align: center;
+section{
+//	@include outer-container;
+//	text-align: center;
 	margin-bottom: 3em;
 
 	& > code, code.block {
 		display: block;
 	}
 
-	div {
-		height: $body-line-height*4;
-		line-height: $body-line-height;
-		text-align: left;
-		padding: 0em; //1em;
+	&#gallery {
+		@include span-columns(12);
+		div {
+			height: $body-line-height*4;
+			line-height: $body-line-height;
+			text-align: left;
+			padding: 0em; //1em;
+		}
+
+		div.project {
+			//font-size: 0.78em;
+			height: 21em;
+			@include span-columns(3);
+			@include omega(4n);
+		}	
 	}
 
-	div.project {
-		//font-size: 0.78em;
-		height: 21em;
-		@include span-columns(3);
-		@include omega(4n);
-	}	
+	&.work {
+		@include span-columns(9);
+
+		div.projectTitle {
+			@include span-columns(2 of 9);
+		}
+		
+		div.projectDescription {
+			@include span-columns(6 of 9);
+
+		}
+
+		div.projectTags {
+			@include span-columns(1 of 9);
+		}
+	}
 }
+
+
+
