@@ -113,7 +113,7 @@ div aside {
     margin-right: 0; }
 
 section {
-  margin-bottom: 3em; }
+  margin-bottom: 0em; }
   section > code, section code.block {
     display: block; }
   section#gallery {
@@ -144,7 +144,8 @@ section {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 74.41059%; }
+    width: 74.41059%;
+    font-size: 75%; }
     section.work:last-child {
       margin-right: 0; }
     section.work div.projectTitle {
@@ -161,6 +162,16 @@ section {
       width: 65.61052%; }
       section.work div.projectDescription:last-child {
         margin-right: 0; }
+      section.work div.projectDescription p:first-of-type {
+        margin-top: 0em; }
+      section.work div.projectDescription img {
+        float: left;
+        display: block;
+        margin-right: 4.82916%;
+        width: 100%;
+        padding: 2em 0em; }
+        section.work div.projectDescription img:last-child {
+          margin-right: 0; }
     section.work div.projectTags {
       float: left;
       display: block;
